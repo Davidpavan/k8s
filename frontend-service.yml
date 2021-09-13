@@ -5,12 +5,11 @@ metadata:
   labels:
     app: react
 spec:
-  type: NodePort
+  type: ClusterIp
   ports:
     - port: 80
       targetPort: 80
       protocol: TCP
-      nodePort: 30000-32767
       name: http
   selector:
     app: react
