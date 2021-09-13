@@ -18,7 +18,7 @@ spec:
           imagePullPolicy: Always
           env:
           - name: MONGODB_HOST
-            value: mongodb
+            value: 172.31.87.107
           ports:
             - containerPort: 8080
 ---
