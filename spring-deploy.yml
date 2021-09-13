@@ -29,6 +29,5 @@ spec:
     - port: 8080
       protocol: TCP
       targetPort: 8080
-      nodeport: 8080
   selector:
     app: spring
