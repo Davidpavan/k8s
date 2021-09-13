@@ -1,18 +1,17 @@
-apiVersion: networking.k8s.io/v1beta1 # for versions before 1.14 use extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: frontend
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
     - http:
         paths:
-          - path: /?(.*)
+          - path: /
+            pathType: Prefix
             backend:
-              serviceName: frontend-service
-              servicePort: 80
-          - path: /api/?(.*)
-            backend:
-              serviceName: spring
-              servicePort: 8080
+              service:
+                name: frontend
+                port:
+                  number: 3000
