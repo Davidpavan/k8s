@@ -16,10 +16,3 @@ spec:
                 name: react
                 port:
                   number: 3000
-          - path: /api
-            pathType: Prefix # <-- IMPORTANT
-            backend:
-              service:
-                name: spring
-                port:
-                  number: 8080
