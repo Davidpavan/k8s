@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring
-          image: pavanvere/springboot:0.0.2
+          image: pavanvere/springboot:0.0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
