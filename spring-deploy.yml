@@ -18,6 +18,3 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          env:
-            - name: MONGO_URL
-              value: mongodb://172.31.87.107:27017/EmployeeDB
