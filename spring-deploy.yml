@@ -27,7 +27,7 @@ kind: Service
 metadata:
   name: spring
 spec:
-  type: Nodeport
+  #type: Nodeport
   ports:
     - port: 8080
       protocol: TCP
