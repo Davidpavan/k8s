@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: react
-  labels:
-    app: react
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: react
@@ -20,5 +19,5 @@ spec:
           stdin: true
           tty: true
           ports:
-            - containerPort: 3000
+            - containerPort: 80
       restartPolicy: Always
