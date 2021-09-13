@@ -1,37 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: react
   labels:
-    app: frontend
+    app: react
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: react
   template:
     metadata:
       labels:
-        app: frontend
+        app: react
     spec:
       containers:
-        - name: frontend
+        - name: react
           image: pavanvere/frontend:0.0.1
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           stdin: true
           ports:
             - containerPort: 3000
+      restartPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: react
+  labels:
+    app: react
 spec:
   type: ClusterIP
   ports:
     - port: 3000
-      protocol: TCP
       targetPort: 3000
+      protocol: TCP
       name: http
   selector:
-    app: frontend
+    app: react
