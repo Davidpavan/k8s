@@ -9,7 +9,7 @@ spec:
     - host: localhost
       http:
         paths:
-          - path: /
+          - path: /*
             pathType: Prefix # <-- IMPORTANT
             backend:
               service:
