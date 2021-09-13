@@ -16,6 +16,9 @@ spec:
         - name: spring
           image: pavanvere/spring:0.0.1
           imagePullPolicy: Always
+          env:
+          - name: MONGODB_HOST
+            value: mongodb
           ports:
             - containerPort: 8080
 ---
