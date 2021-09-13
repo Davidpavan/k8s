@@ -16,7 +16,6 @@ spec:
         - name: spring
           image: pavanvere/spring:0.0.1
           imagePullPolicy: Always
-          stdin: true
           ports:
             - containerPort: 8080
 ---
