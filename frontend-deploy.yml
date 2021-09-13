@@ -18,6 +18,7 @@ spec:
           image: pavanvere/frontend:0.0.1
           imagePullPolicy: Always
           stdin: true
+          tty: true
           ports:
             - containerPort: 3000
       restartPolicy: Always
