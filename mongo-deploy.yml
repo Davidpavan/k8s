@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb
+  name: mongo
   labels:
 spec:
   replicas: 1
@@ -24,16 +24,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: db
-  labels:
-    name: mongo
   name: mongo
+  labels:
+    app: mongo
 spec:
   type: ClusterIP
   ports:
     - port: 27017
-      name: db
       targetPort: 27017
+      protocol: TCP
+      name: http
   selector:
-    name: mongo
     app: mongo
