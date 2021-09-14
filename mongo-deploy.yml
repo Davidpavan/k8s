@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mongo
-          image: mongo:latest
+          image: mongo
           ports:
             - name: mongo
               containerPort: 27017
@@ -31,7 +31,5 @@ spec:
   ports:
     - port: 27017
       targetPort: 27017
-      protocol: TCP
-      name: http
   selector:
     app: mongo
