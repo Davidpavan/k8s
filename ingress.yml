@@ -2,15 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: react
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: localhost
-      http:
+    - http:
         paths:
           - path: /*
             pathType: Prefix # <-- IMPORTANT
             backend:
               service:
-                name: react
+                name: nginx
                 port:
-                  number: 3000
+                  number: 80
