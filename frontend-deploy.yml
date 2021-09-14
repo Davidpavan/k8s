@@ -19,5 +19,5 @@ spec:
           stdin: true
           tty: true
           ports:
-            - containerPort: 80
+            - containerPort: 3000
       restartPolicy: Always
