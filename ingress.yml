@@ -8,10 +8,10 @@ spec:
   rules:
     - http:
         paths:
-          - path: /*
+          - path: /
             pathType: Prefix # <-- IMPORTANT
             backend:
               service:
-                name: nginx
+                name: react
                 port:
-                  number: 80
+                  number: 3000
