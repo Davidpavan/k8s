@@ -16,9 +16,9 @@ spec:
                 port:
                   number: 3000
           - path: /*
-              pathType: Prefix # <-- IMPORTANT
-              backend:
-                service:
-                  name: backend
-                  port:
-                    number: 8080
+            pathType: Prefix # <-- IMPORTANT
+            backend:
+              service:
+                name: spring
+                port:
+                  number: 8080
