@@ -19,6 +19,6 @@ spec:
               pathType: Prefix # <-- IMPORTANT
               backend:
                 service:
-                  name: spring
+                  name: backend
                   port:
                     number: 8080
