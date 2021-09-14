@@ -15,9 +15,12 @@ spec:
       containers:
         - name: spring
           image: pavanvere/spring:0.0.1
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          env:
+            - name: spring.data.mongodb.uri
+              value: mongodb://172.31.87.107:27017/EmployeeDB
+          imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
