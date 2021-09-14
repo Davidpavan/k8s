@@ -17,10 +17,6 @@ spec:
           image: pavanvere/spring:0.0.1
           ports:
             - containerPort: 8080
-          env:
-            - name: MONGO_URL
-              value: mongodb://mongo:27017/EmployeeDB
-          imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
@@ -29,7 +25,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 8080
       protocol: TCP
       name: http
