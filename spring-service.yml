@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: spring-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     component: backend
   ports:
     - port: 8080
-      targetPort: 8080
+      targetPort: 30036
       protocol: TCP
