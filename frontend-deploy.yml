@@ -1,23 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deploy
+  name: frontend-deployment
 spec:
-  replicas: 2
   selector:
     matchLabels:
-      app: frontend
+      component: frontend
   template:
     metadata:
       labels:
-        app: frontend
+        component: frontend
     spec:
       containers:
         - name: frontend
-          image: pavanvere/frontend:0.0.7
-          imagePullPolicy: Always
+          image: pavanvere/frontend:0.0.1
           stdin: true
           tty: true
           ports:
             - containerPort: 3000
-      restartPolicy: Always
