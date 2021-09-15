@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: spring
+  name: react
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
@@ -12,9 +12,9 @@ spec:
             pathType: Prefix # <-- IMPORTANT
             backend:
               service:
-                name: spring
+                name: react
                 port:
-                  number: 8080
+                  number: 3000
           #backend:
            #   service:
             #    name: spring
