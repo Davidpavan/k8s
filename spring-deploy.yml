@@ -26,6 +26,8 @@ metadata:
   name: spring-service
 spec:
   type: ClusterIP
+  selector:
+    component: backend
   ports:
     - port: 8080
       targetPort: 8080
