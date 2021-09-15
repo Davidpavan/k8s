@@ -4,6 +4,8 @@ metadata:
   name: frontend-service
 spec:
   type: ClusterIP
+  selector:
+    component: frontend
   ports:
     - port: 3000
       targetPort: 3000
