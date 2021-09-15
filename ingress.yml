@@ -16,7 +16,7 @@ spec:
                 port:
                   number: 3000
 
-          - path: /employees/
+          - path: /api/v1/employees
             pathType: Prefix # <-- IMPORTANT
             backend:
               service:
