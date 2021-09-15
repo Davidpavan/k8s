@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: pavanvere/frontend:0.0.1
+          image: pavanvere/frontend:0.0.10
           stdin: true
           tty: true
           ports:
