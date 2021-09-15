@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring
+  name: spring-deploy
 spec:
   selector:
     matchLabels:
@@ -20,9 +20,10 @@ spec:
           #  - sleep
           #  - "1000000"
 ---
+apiVersion: apps/v1
 kind: Service
 metadata:
-  name: spring
+  name: spring-service
 spec:
   type: ClusterIP
   ports:
