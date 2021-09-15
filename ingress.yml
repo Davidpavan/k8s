@@ -14,7 +14,7 @@ spec:
               service:
                 name: spring
                 port:
-                  number: 3000
+                  number: 8080
           #backend:
            #   service:
             #    name: spring
