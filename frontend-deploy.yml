@@ -14,6 +14,7 @@ spec:
       containers:
         - name: frontend
           image: pavanvere/frontend:0.0.1  #0.0.10
+          imagePullPolicy: Always
           stdin: true
           tty: true
           ports:
