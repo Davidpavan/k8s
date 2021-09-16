@@ -19,3 +19,6 @@ spec:
           tty: true
           ports:
             - containerPort: 3000
+          env:
+            - name: EMPLOYEE_API_BASE_URL
+              value:  "http://spring-service:8080/api/v1/employees"
