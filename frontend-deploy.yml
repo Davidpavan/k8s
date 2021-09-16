@@ -13,12 +13,12 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: pavanvere/frontend:0.0.1  #0.0.10
+          image: pavanvere/frontend:0.0.11  #0.0.10 or 0.0.1
           imagePullPolicy: Always
           stdin: true
           tty: true
           ports:
             - containerPort: 3000
           env:
-            - name: EMPLOYEE_API_BASE_URL
+            - name: EMPLOYEE_URL
               value:  "http://spring-service:8080/api/v1/employees"
