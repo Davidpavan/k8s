@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: pavanvere/frontend:0.0.16  #0.0.10 13or 0.0.1
+          image: pavanvere/frontend:0.0.1  #0.0.10 13or 0.0.1
           imagePullPolicy: Always
           stdin: true
           tty: true
