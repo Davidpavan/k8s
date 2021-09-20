@@ -19,3 +19,5 @@ spec:
           tty: true
           ports:
             - containerPort: 3000
+          env:
+            - BACKEND_API=3.233.109.17
