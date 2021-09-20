@@ -21,4 +21,4 @@ spec:
             - containerPort: 3000
           env:
             - name: BACKEND_API
-              value: 3.233.109.17
+              value: spring-service.pavanzs.online
