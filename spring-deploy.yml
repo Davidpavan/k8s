@@ -20,5 +20,5 @@ spec:
           #  - sleep
           #  - "1000000"
           env:
-            - name: MONGO_URL
-              value: mongodb://mongo:27017/EmployeeDB
+            - name: DB_SERVER
+              value: mongo
