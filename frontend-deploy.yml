@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: pavanvere/frontend:0.0.1  #0.0.10 13or 0.0.1
+          image: pavanvere/frontend:0.0.2  #0.0.10 13or 0.0.1
           imagePullPolicy: Always
           stdin: true
           tty: true
@@ -21,4 +21,4 @@ spec:
             - containerPort: 3000
           env:
             - name: REACT_APP_API_URL
-              value: http://localhost:8080/api/v1/employees
+              value: http://3.233.109.17:8080/api/v1/employees
